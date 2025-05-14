@@ -8,4 +8,4 @@ Kickstarting with the basics — squaring 100 numbers in parallel. Clean, effici
 **Key Learnings**
 - Learned how to launch a CUDA kernel with proper grid and block dimensions.
 - Understood thread indexing to map computations to data.
-- Practiced basic parallel output using printf from device code
+- Practiced basic parallel output using printf from device 
