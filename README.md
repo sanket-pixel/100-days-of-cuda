@@ -14,3 +14,10 @@ on the GPU and copy it from GPU to CPU.
 - Allocated memory on the GPU using `cudaMalloc`.
 - Transferred data from device to host using `cudaMemcpy`.
 - Reinforced understanding of device-side execution and host-device interaction.
+
+### Day 3
+Today’s CUDA kernel assigns unique thread IDs to a 2D matrix. Each element gets initialized to the flattened thread ID (threadIdx.y * blockDim.x + threadIdx.x).
+A simple but powerful way to build intuition around thread layout in 2D grids.
+- Learned how to launch a 2D CUDA thread block using dim3.
+- Practiced flattening 2D thread indices into a 1D memory layout.
+- Understand use of `threadIdx.x`, `threadIdx.y`, `blockDim.x`, `blockDim.y`.
