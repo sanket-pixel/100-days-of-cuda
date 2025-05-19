@@ -43,3 +43,13 @@ thread is responsible for calculating one matrix element by flattening the 2D ro
 - Learned to launch 1D thread blocks with N×N threads to compute a 2D matrix.
 - Practiced mapping a 1D thread index to (row, col) in a 2D grid using integer division and modulo.
 - Used sqrtf() and powf() inside device code to compute Euclidean distances.
+
+### Day 5: Square a Matrix with CUDA
+
+```19.05.2025```
+Today’s kernel squares a 3×3 matrix on the GPU by treating it as a flat array. Each thread computes a single element of
+the output matrix using classic matrix multiplication logic.
+
+- Learned how to flatten 2D matrix multiplication into a 1D thread space.
+- Practiced accessing rows and columns from a flat index using % and /.
+- Used shared indexing patterns to simulate 2D memory layout on a 1D thread grid.
