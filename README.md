@@ -53,3 +53,13 @@ the output matrix using classic matrix multiplication logic.
 - Learned how to flatten 2D matrix multiplication into a 1D thread space.
 - Practiced accessing rows and columns from a flat index using % and /.
 - Used shared indexing patterns to simulate 2D memory layout on a 1D thread grid.
+
+### Day 6: Understanding Warps in CUDA
+
+```20.05.2025```
+Today’s CUDA kernel highlights the concept of warps—groups of 32 threads executed together by the GPU. Each thread
+calculates and prints its warp ID using warp_id = threadIdx.x / 32.
+
+- Learned that threads within a warp execute instructions in lockstep.
+- Saw how to group threads by their warp ID.
+- Reinforced why branching within a warp (warp divergence) is costly in performance-sensitive code.
