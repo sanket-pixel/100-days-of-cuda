@@ -63,3 +63,14 @@ calculates and prints its warp ID using warp_id = threadIdx.x / 32.
 - Learned that threads within a warp execute instructions in lockstep.
 - Saw how to group threads by their warp ID.
 - Reinforced why branching within a warp (warp divergence) is costly in performance-sensitive code.
+
+### Day 7: Image RGB to Grayscale Conversion
+
+```21.05.2025```
+Today’s kernel converts a float32 RGB image to grayscale on the GPU by computing a weighted sum of color channels in
+parallel.
+
+- Learned to process interleaved RGB float data with one thread per pixel.
+- Used the luminance formula: 0.299*R + 0.587*G + 0.144*B.
+- Practiced indexing a flat array for 2D image data in CUDA.
+- Handled OpenCV’s CV_32F to CV_8U conversion for image saving.
