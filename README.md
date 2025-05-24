@@ -74,3 +74,27 @@ parallel.
 - Used the luminance formula: 0.299*R + 0.587*G + 0.144*B.
 - Practiced indexing a flat array for 2D image data in CUDA.
 - Handled OpenCV’s CV_32F to CV_8U conversion for image saving.
+
+### Day 8: Demonstrating Thread Divergence in a Warp
+
+```22.05.2025```
+Today’s CUDA kernel showcases thread divergence within a warp by assigning different execution paths to threads based on
+`tid % 4`.
+
+- Used 8 threads in a single block to simulate divergence across 4 branches.
+- Printed each thread’s ID and its warp to show which path it follows.
+- Reinforced how branching inside a warp can cause serialization and reduce performance.
+- Observed how threads in the same warp follow different code paths based on their tid.
+
+### Day 9: Find maxiumum of a large array
+
+```24.05.2025```
+Today’s CUDA kernel performs a parallel reduction to find the maximum value from an array in chunks of size K.
+
+- Divided input array into N/K buckets, each handled by one thread.
+- Each thread computes the maximum of its K elements.
+- Laid groundwork for full parallel reduction (multi-step) by producing intermediate results.
+- Practiced device memory allocation, kernel launch config, and host-device transfers.
+
+
+
