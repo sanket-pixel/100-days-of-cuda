@@ -96,5 +96,12 @@ Today’s CUDA kernel performs a parallel reduction to find the maximum value fr
 - Laid groundwork for full parallel reduction (multi-step) by producing intermediate results.
 - Practiced device memory allocation, kernel launch config, and host-device transfers.
 
+### Day 7: Image RGB to Grayscale Conversion with 2D grid and block
 
+```21.05.2025```
+Today’s kernel converts a float32 RGB image to grayscale on the GPU by computing a weighted sum of color channels in
+parallel but using 2D grid and blocks.
 
+- Learned to process interleaved RGB float data with one thread per pixel.
+- Used the luminance formula: 0.299*R + 0.587*G + 0.144*B.
+- Practiced indexing a 2D grid and block 2D image data in CUDA.
